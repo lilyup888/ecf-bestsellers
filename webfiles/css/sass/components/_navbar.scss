@@ -1,0 +1,42 @@
+@use '../utils/_variables' as *;
+
+nav{
+    display: flex;
+    flex-direction: row;
+    max-width: $mxw;
+    margin: auto;
+    padding-left: $padding-med;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-items: center;
+    justify-content: space-between;
+
+    img{
+        width: 75px;
+        height: 75px;
+    }
+
+    ul{
+        display: flex;
+
+        a{
+            display: block;
+            padding: 1.125rem 1.5rem;
+            color: $primary-grey;
+            font-weight: bold;
+            font-size: 1.15rem;
+
+            &[href="#romans"]{
+                color: $roman;
+            }
+
+            &[href="#poesies"]{
+                color: $poesy;
+            }
+
+            &[href="#fictions"]{
+                color: $fiction;
+            }
+        }
+    }
+}

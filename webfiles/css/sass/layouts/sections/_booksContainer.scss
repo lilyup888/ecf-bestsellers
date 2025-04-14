@@ -1,0 +1,79 @@
+@use '../../utils/_variables' as *;
+@use '../../utils/mixins' as mix;
+
+#booksContainer{
+    max-width: $mxw;
+    margin: auto;
+    padding: 0 $padding-med;
+    margin-bottom: 4.5rem;
+
+    .row{
+        display: flex;
+        flex-direction: row;
+        gap: 2.25rem;
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem;
+        border-top: 4px solid $third-grey;
+
+        &:first-of-type{
+            padding-top: 0;
+            border-top: 0;
+        }
+
+        &:last-of-type{
+            padding-bottom: 0;
+        }
+    }
+
+    .book{
+        width: 25%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.125rem;
+
+        .cover{
+            width: 100%;
+            height: 425px;
+            object-fit: cover;
+            order: 1;
+        }
+
+        h2{
+            order: 2;
+            margin: 2rem 0;
+        }
+
+        &>div{
+            order: 3;
+        }
+
+        .type{
+            @include mix.pellet;
+
+            &.roman{
+                background-color: $roman;
+            }
+
+            &.poesie{
+                background-color: $poesy;
+            }
+
+            &.fiction{
+                background-color: $fiction;
+            }
+        }
+
+        .author{
+            display: flex;
+            gap: 1rem;
+            color: $secondary-grey;
+            align-items: baseline;
+            margin-bottom: 1.25rem;
+        }
+
+        .synopsis{
+            line-height: 1.25rem;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+// base/_typographies.scss
+
+@use '../utils/_variables' as *;
+@use "../utils/mixins" as mix;
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../../../../src/fonts/RobotoSlab-Variable.woff') format('woff');
+    font-display: swap;
+}
+
+h1, #manquant h2{
+    @include mix.big-title;
+}
+
+.book h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+}

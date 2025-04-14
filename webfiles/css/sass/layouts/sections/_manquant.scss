@@ -1,0 +1,83 @@
+@use '../../utils/variables' as *;
+
+#manquant{
+    background-color: $form-bg;
+    font-size: 1.15rem;
+    color: $primary-grey;
+    padding-bottom: 4.5rem;
+
+    h2{
+        padding-top: 4.5rem;
+    }
+
+    p{
+        line-height: 1.25rem;
+    }
+
+    form{
+        padding-top: 3rem;
+        font-size: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 1.15rem;
+
+        input, textarea{
+            width: 100%;
+            box-sizing: border-box;
+            resize: none;
+            font-family: 'Roboto Slab';
+            font-size: inherit;
+            border-radius: 5px;
+            border: none;
+            border: 1px solid $secondary-grey;
+            padding: 0.625rem;
+            color: inherit;
+            line-height: 1.25rem;
+            letter-spacing: 5%;
+        }
+
+        textarea{
+            height: 170px;
+        }
+
+        .nextTo{
+            display: inherit;
+            flex-direction: row;
+            gap: inherit;
+
+            input{
+                width: 50%;
+            }
+        }
+
+        .underEach{
+            display: inherit;
+            flex-direction: inherit;
+            gap: inherit;
+        }
+
+        .acceptance{
+            display: inherit;
+            flex-direction: row;
+            gap: inherit;
+
+            input{
+                width: 20px;
+                margin: 0;
+            }
+        }
+
+        input[type="submit"]{
+            margin-top: 2rem;
+            background-color: $roman;
+            cursor: pointer;
+            width: fit-content;
+            padding: 0.625rem 2rem;
+            border-radius: 15px;
+            color: $white;
+            border: none;
+            font-weight: bold;
+        }
+
+    }
+}

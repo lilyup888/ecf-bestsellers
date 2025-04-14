@@ -1,0 +1,19 @@
+@use "./variables" as *;
+
+@mixin big-title{
+    padding: 9rem $padding-med 4.5rem $padding-med;
+    font-size: 4rem;
+    text-align: center;
+    color: $primary-grey;
+    max-width: $mxw;
+    margin: auto;
+}
+
+@mixin pellet{
+    border-radius: 100px;
+    color: $white;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}

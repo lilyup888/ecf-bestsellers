@@ -1,0 +1,15 @@
+@use '../utils/variables' as *;
+@use "../layouts/header";
+@use "../layouts/sections/booksContainer";
+@use "../layouts/sections/manquant";
+@use "../layouts/footer";
+
+main{
+    background-color: $main-bg;
+
+    .mxwidthContainer{
+        max-width: $mxw;
+        margin: auto;
+        padding: 0 $padding-med;
+    }
+}
